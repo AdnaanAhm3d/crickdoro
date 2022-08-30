@@ -1,0 +1,12 @@
+1. Set target dynamically.  - DONE
+2. Once score reaches the target change the text to a congratulation text. - DONE
+3. ball pages settings, when opened up, you can either change target or go back to difficulty page. - HALF DONE
+4. Fix bugs like when modals are open, block interaction outside the modal. - DONE
+5. Create How it's played page. - DONE.
+6. Design Css for mobile version. - DONE
+7. Design Css for bigger height screen. DONE
+8. Fix timer speed. - DONE
+9. Fix reset and forward function of bat section - DONE
+10. Fix Navbar on small screen.
+11. Fix How its played css for netlify. - DONE
+12. Fix title page.
