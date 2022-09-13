@@ -10,9 +10,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 function App() {
   const { dummy, setToss, toss, setBat, setBall, bat, ball } =
     useContext(DefaultContext)
-  useEffect(() => {
-    console.log(window.innerHeight)
-  })
+  useEffect(() => {})
   return (
     <>
       <div className='app-css'>

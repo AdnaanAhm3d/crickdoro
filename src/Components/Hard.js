@@ -3,6 +3,7 @@ import { DefaultContext } from '../Context/DefaultContext'
 import { ReactComponent as Pitch } from '../images/Pitch.svg'
 import { ReactComponent as ResetIcon } from '../images/reset-icon.svg'
 import { ReactComponent as ForwardIcon } from '../images/forward-icon.svg'
+import { ReactComponent as Xtoggle } from '../images/X.svg'
 import HowitsPlayed from './HowitsPlayed'
 const Easy = () => {
   const {
@@ -200,6 +201,10 @@ const Easy = () => {
     setTarget(false)
     setModalui(false)
     setsound.play()
+
+    if (chase === false) {
+      setChase(true)
+    }
     // setMinute(25)
     // setSeconds(0)
     // clearInterval(increment.current)
@@ -214,7 +219,7 @@ const Easy = () => {
   //   }
 
   const scorecardFunc = () => {
-    if (runs === sessions) {
+    if (runs == sessions) {
       // setChase(false)
       score = `You've Chased the Target!!!!`
       setChase(false)
@@ -233,10 +238,19 @@ const Easy = () => {
     }
   }
 
+  const xtoggler = (e) => {
+    e.preventDefault()
+
+    setTarget(false)
+    setModalui(false)
+    // setsound.play()
+  }
+
   return (
     <>
       {target && (
         <div className='target-form'>
+          <Xtoggle className='xtoggle' onClick={xtoggler} />
           <div className='form-section'>
             <div className='form'>
               <label className=''>Set Your Target</label>

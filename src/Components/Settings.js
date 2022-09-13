@@ -91,8 +91,10 @@ const Settings = () => {
         >
           {/* Difficulty Article */}
           <EasyIcon className='difficulty-logo' />
-          <h3 className='difficulty-info'>25 - 5</h3>
-          <button className='difficulty-btn'>Easy</button>
+          <div className='difficulty-div'>
+            <h3 className='difficulty-info'>25 - 5</h3>
+            <button className='difficulty-btn'>Easy</button>
+          </div>
         </article>
 
         {/* Difficulty Article */}
@@ -104,8 +106,10 @@ const Settings = () => {
           onClick={() => handleMid()}
         >
           <MediumIcon className='difficulty-logo' />
-          <h3 className='difficulty-info'>45 - 15</h3>
-          <button className='difficulty-btn'>Medium</button>
+          <div className='difficulty-div'>
+            <h3 className='difficulty-info'>45 - 15</h3>
+            <button className='difficulty-btn'>Medium</button>
+          </div>
         </article>
 
         {/* Difficulty Article */}
@@ -116,8 +120,10 @@ const Settings = () => {
           onClick={() => handleHard()}
         >
           <HardIcon className='difficulty-logo' />
-          <h3 className='difficulty-info'>50 - 10</h3>
-          <button className='difficulty-btn'>Hard</button>
+          <div className='difficulty-div'>
+            <h3 className='difficulty-info'>50 - 10</h3>
+            <button className='difficulty-btn'>Hard</button>
+          </div>
         </article>
       </div>
     </>

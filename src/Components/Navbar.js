@@ -136,6 +136,9 @@ export const Navbar = () => {
     }
   }
 
+  const widthCss = window.innerWidth
+  // console.log(width)
+
   return (
     <>
       <nav className='nav-bar'>
@@ -143,9 +146,11 @@ export const Navbar = () => {
           <InfoIcon
             className={`info-icon ${modalui === false && 'home-pointer'}`}
           />
-          <h4 className={`info-text ${modalui === false && 'home-pointer'}`}>
-            How It's Played
-          </h4>
+          {widthCss > 600 && (
+            <h4 className={`info-text ${modalui === false && 'home-pointer'}`}>
+              How It's Played
+            </h4>
+          )}
         </div>
 
         <div className={`logo-panel`}>

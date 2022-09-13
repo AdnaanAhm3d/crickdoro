@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useContext } from 'react'
 
 import { DefaultContext } from '../Context/DefaultContext'
+import { ReactComponent as Xtoggle } from '../images/X.svg'
 
 const TimerSettings = () => {
   const {
@@ -51,6 +52,14 @@ const TimerSettings = () => {
     setsound.play()
   }
 
+  const xtoggler = (e) => {
+    e.preventDefault()
+
+    setshowSettings(false)
+    setModalui(false)
+    // setsound.play()
+  }
+
   function useKey(key, cb) {
     const callbackRef = useRef(cb)
     useEffect(() => {
@@ -93,13 +102,14 @@ const TimerSettings = () => {
   return (
     <>
       <div className='timer-settings'>
+        <Xtoggle className='xtoggle' onClick={xtoggler} />
         <div className='TS-section'>
           <div className='TS-title'>Timer Settings</div>
           <hr />
         </div>
 
         <div className='TS-button-section' onSubmit={changeSettings}>
-          <div className='TS-pomodoro-form '>
+          <div className='TS-pomodoro-form'>
             <h4 className='TS-name'>Pomodoro</h4>
             <input
               className='TS-input'
